@@ -7,7 +7,6 @@
 
 def performCalculations(value):
 
-    value =
 
 
     result = value

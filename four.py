@@ -38,28 +38,36 @@ def questionTwo():
 
     numbers = '0123456789'
 
-    countTracker = 0
-
     finalNum3 = 0
 
-    for count in range(10):
-        print("Count: " + str(count))
-        countTracker = count
-        for line in inputF:
-            for i in line:
-                if i in numbers:
-                    print(i)
-                    finalNum3 = finalNum3 + int(i)
-    print(finalNum3)
+    for fileLines in inputF:
+        for text in fileLines:
+            if text in numbers:
+                # print(i)
+                finalNum3 = finalNum3 + int(text)
+    outputString = ""
 
-    for i in inputF:
-        countTracker = countTracker + 1
-        print("Count Tracker: " + countTracker)
-        if int(i) == 9:
-            print("works")
+    with open("four.txt") as fp:
+        for i, line in enumerate(fp):
+            if i >= 10:
+
+                for aLine in line:
+                    outputString = outputString + aLine.replace("|", " ")
+                break
+
+    counter = 0
+
+    if "|" not in outputString:
+        for i in outputString:
+            counter = counter + 1
+            if counter >= finalNum3:
+                print("test")
+                print(i)
+                break
 
     inputF.close()
 
+
 if __name__ == "__main__":
-    questionOne()
+    # questionOne()
     questionTwo()
