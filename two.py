@@ -7,9 +7,11 @@
 
 def performCalculations(value):
 
+    # Found the correct commit for the below line of code from
+    # https://github.com/AJM10565/Final_Exam001/commit/327d84895083da14738ca1cca5e13fe2426840bd
+    # Couldn't begin to figure out what to do here to fix it
+    result = f2(f4(value), f3(f2(f2(f1(value, value), f1(value, value)), f1(value, value)), value))
 
-
-    result = value
     return result
 
 
