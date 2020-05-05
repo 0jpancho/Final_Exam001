@@ -7,15 +7,24 @@
 """
 
 
-def checkisPallendrome(text):
-    result = False
-    return result
+def checkisPallendrome(inputText):
+    inputText = inputText.replace(" ", "")
+    inputText = inputText.lower()
+    testString = ""
+    for i in inputText:
+        testString = i + testString
+        # print("Test String: " + testString)
+
+    if inputText in testString:
+        return True
+    else:
+        return False
 
 
-def tester(text, expected_result):
-    actual_result = checkisPallendrome(text)
+def tester(inputText, expected_result):
+    actual_result = checkisPallendrome(inputText)
 
-    print_text = "The text was: " + str(text) + " | "
+    print_text = "The text was: " + str(inputText) + " | "
     if expected_result == actual_result:
         print_text += "Correct: " + str(expected_result) + " == " + str(actual_result)
     else:
@@ -35,3 +44,4 @@ if __name__ == "__main__":
     print(tester(text0, False))
     print(tester(text1, True))
     print(tester(text4, False))
+    print(tester(text3, True))

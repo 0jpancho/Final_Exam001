@@ -11,12 +11,12 @@
 """
 import random
 
+
 def passwordGenerator(personal_list):
     password = n00b1234
     return password
 
 
-
 if __name__ == "__main__":
-    mylist = [12,"BOB",-2,"Amy",["David","Jona","Timmothy"],"Burt"]
+    mylist = [12, "BOB", -2, "Amy", ["David", "Jona", "Timmothy"], "Burt"]
     print(passwordGenerator(mylist))

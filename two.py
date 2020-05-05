@@ -6,6 +6,10 @@
 
 
 def performCalculations(value):
+
+    value =
+
+
     result = value
     return result
 

@@ -16,8 +16,50 @@
 """
 
 
-def fun():
-    pass
+def questionOne():
+    inputF = open("four.txt", 'r')
+    outputF = open("solution4.txt", 'w')
+
+    for line in inputF:
+        outputString = ""
+        for i in line:
+            if i.isupper():
+                outputString = outputString + i
+            else:
+                pass
+        outputF.write(outputString)
+
+    inputF.close()
+    outputF.close()
+
+
+def questionTwo():
+    inputF = open("four.txt", 'r')
+
+    numbers = '0123456789'
+
+    countTracker = 0
+
+    finalNum3 = 0
+
+    for count in range(10):
+        print("Count: " + str(count))
+        countTracker = count
+        for line in inputF:
+            for i in line:
+                if i in numbers:
+                    print(i)
+                    finalNum3 = finalNum3 + int(i)
+    print(finalNum3)
+
+    for i in inputF:
+        countTracker = countTracker + 1
+        print("Count Tracker: " + countTracker)
+        if int(i) == 9:
+            print("works")
+
+    inputF.close()
 
 if __name__ == "__main__":
-    fun()
+    questionOne()
+    questionTwo()
